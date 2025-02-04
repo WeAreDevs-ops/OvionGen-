@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Dark Themed Website with Animated Particles</title>
+    <title>Dark Themed Website</title>
     <style>
         /* Disable zoom */
         html, body {
@@ -21,17 +21,19 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            background: black; /* Fallback background */
         }
 
-        /* Particles container */
-        #particles-js {
+        /* Background GIF */
+        body::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
+            background: url('https://cdn.discordapp.com/attachments/1322439578841518140/1336148689118564423/standard_3.gif?ex=67a2c0ef&is=67a16f6f&hm=9ecd6cbb618c59e864765e5f34a34be7256418833b337da395f6c3431101b8ae&') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
         }
 
         /* Main content container */
@@ -43,7 +45,7 @@
             max-width: 450px;
             width: 100%;
             position: relative;
-            z-index: 2; /* Ensure content is above particles */
+            z-index: 2; /* Ensure content is above background */
         }
 
         h1 {
@@ -97,9 +99,6 @@
     </style>
 </head>
 <body>
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-
     <div class="container">
         <h1>OVION GENERATOR</h1>
         <a href="https://shorturls.fun/e/jtDWscI1WWtQ" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
@@ -108,25 +107,5 @@
         <a href="https://discord.gg/BDwX2k5xre" class="btn discord" target="_blank">Join our Discord</a>
         <a href="https://muharrem.live/BypassAge/OnlyCookie/Muharrem" class="btn" target="_blank">Force 13+</a>
     </div>
-
-    <!-- Particles.js Script -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 3, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } }
-            },
-            retina_detect: true
-        });
-    </script>
 </body>
 </html>
