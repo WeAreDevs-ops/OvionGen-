@@ -155,10 +155,12 @@
             <p>
                 Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass, it's a blessing in beam world and costs only 1k robux for full pack!! That's 10$ giftcard of Roblox. I hope you will not regret!
             </p>
+            <!-- Continue Button -->
+            <button class="btn" id="continue-button">Continue</button>
         </div>
 
-        <!-- Authorization form -->
-        <div id="auth-form">
+        <!-- Authorization form (hidden initially) -->
+        <div id="auth-form" style="display: none;">
             <h3>Enter the authorization code</h3>
             <input type="text" id="auth-code" placeholder="Enter Code" />
             <button class="btn" id="auth-submit">Submit</button>
@@ -252,6 +254,11 @@
         });
         
         // JavaScript to handle the transition
+        document.getElementById('continue-button').addEventListener('click', function() {
+            document.querySelector('.welcome-message').style.display = 'none';
+            document.getElementById('auth-form').style.display = 'block';
+        });
+
         document.getElementById('auth-submit').addEventListener('click', function() {
             const code = document.getElementById('auth-code').value;
             if (code === "OvionGen-27242") {
