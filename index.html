@@ -19,16 +19,10 @@
             position: relative;
             overflow: hidden;
             background-color: #111111; /* Dark theme background */
-        }
-
-        /* Particles background */
-        #particles-js {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            background-image: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg?ex=67a33ca9&is=67a1eb29&hm=7c62b1da5681547de90cc4669bd4c8fd63d0c8a2e30a7e7140588e92017674cb&');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         /* Main content container */
@@ -61,7 +55,7 @@
             font-size: 3rem;
             margin-bottom: 20px;
             font-weight: 600;
-            color: #ff6666; /* Light Red for neon effect */
+            color: #ff6666; /* Neon Red for neon effect */
             text-transform: uppercase;
             text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff6666;
         }
@@ -69,7 +63,7 @@
         /* Neon style for buttons */
         .btn {
             display: inline-block;
-            background-color: #007BFF;
+            background-color: #ff6666; /* Light red color for all buttons */
             color: white;
             padding: 12px 24px;
             margin: 10px 0;
@@ -82,16 +76,16 @@
         }
 
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #ff4d4d; /* Darker red on hover */
             transform: translateY(-4px);
         }
 
         .btn.discord {
-            background-color: #7289da;
+            background-color: #ff6666; /* Light red color */
         }
 
         .btn.discord:hover {
-            background-color: #5b6e96;
+            background-color: #ff4d4d;
         }
 
         /* Authorization form */
@@ -141,9 +135,6 @@
     </style>
 </head>
 <body>
-    <!-- Particles.js container -->
-    <div id="particles-js"></div>
-
     <div class="container">
         <!-- Welcome message with neon title -->
         <div class="welcome-message" id="welcome-message">
@@ -178,82 +169,7 @@
         </div>
     </div>
 
-    <!-- Particles.js script -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script>
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 100,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ff6666" /* Neon Red */
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0.1
-                    }
-                },
-                "size": {
-                    "value": 5,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "size_min": 0.1
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ff6666",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 3,  /* Increased speed for more movement */
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-        
         // JavaScript to handle transitions between pages
         document.getElementById('continue-button').addEventListener('click', function() {
             document.getElementById('welcome-message').style.display = 'none';
