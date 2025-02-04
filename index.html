@@ -5,60 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <title>Ovion Generator</title>
     <style>
-        /* General Styling */
+        /* General styles */
         html, body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
+            text-align: center;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            background: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg') no-repeat center center;
+            background: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
         .container {
-            background-color: rgba(26, 26, 26, 0.85);
+            background-color: rgba(26, 26, 26, 0.9);
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 10px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
             width: 90%;
-            max-width: 600px;
-            position: relative;
+            max-width: 500px;
         }
 
         h1 {
             font-size: 2rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-            color: #ff4d4d;
+            font-weight: 700;
             text-transform: uppercase;
+            color: red;
+            text-shadow: 0 0 10px red;
         }
 
         .btn {
-            display: inline-block;
+            display: block;
             background-color: #ff4d4d;
             color: white;
-            padding: 10px 20px;
-            margin: 8px 0;
+            padding: 12px;
+            margin: 10px auto;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1rem;
-            transition: all 0.3s ease-in-out;
+            transition: 0.3s;
+            width: fit-content;
+            min-width: 180px;
         }
 
         .btn:hover {
             background-color: #cc0000;
-            transform: translateY(-3px);
+        }
+
+        .btn.discord {
+            background-color: #7289da;
+        }
+
+        .btn.discord:hover {
+            background-color: #5b6e96;
+        }
+
+        .hidden {
+            display: none;
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .container {
-                max-width: 90%;
+                width: 95%;
                 padding: 20px;
             }
             h1 {
@@ -66,73 +78,82 @@
             }
             .btn {
                 font-size: 0.9rem;
+                padding: 10px;
             }
         }
-
     </style>
-    <script>
-        function showPage(page) {
-            document.getElementById('welcomePage').style.display = 'none';
-            document.getElementById('mainForm').style.display = 'none';
-            document.getElementById('tutorialPage').style.display = 'none';
-            document.getElementById(page).style.display = 'flex';
-        }
-    </script>
 </head>
 <body>
+
     <!-- Welcome Page -->
-    <div id="welcomePage" class="container">
+    <div id="welcome-page" class="container">
         <h1>OvionGen $ Bypasser</h1>
-        <p>Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass. Costs only 1k robux for full pack!</p>
-        <a href="https://discord.gg/dUAnpXcxNf" class="btn">Join Discord for Code</a>
-        <button class="btn" onclick="showPage('mainForm')">Continue</button>
+        <p>Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force), and much more using just cookies or cookie + pass. It's a blessing in the beam world and costs only 1K Robux for the full pack! That’s a $10 Roblox gift card. I hope you won’t regret it!</p>
+        <a href="https://discord.gg/dUAnpXcxNf" class="btn discord" target="_blank">Join Our Discord</a>
+        <button class="btn" onclick="showMainForm()">Continue</button>
     </div>
 
     <!-- Main Form -->
-    <div id="mainForm" class="container" style="display: none;">
+    <div id="main-form" class="container hidden">
         <h1>Ovion Generator</h1>
-        <a href="https://www.genned.net/auth/ovion" class="btn">Main Website</a>
-        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn">Website 2</a>
-        <a href="https://is.gd/xXSfJ8" class="btn">Website 3</a>
-        <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn">Force Disable Authenticator</a>
-        <a href="https://discord.gg/BDwX2k5xre" class="btn">Join our Discord</a>
-        <button class="btn" onclick="showPage('welcomePage')">Back</button>
-        <button class="btn" onclick="showPage('tutorialPage')">Tutorial</button>
+        <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">Main Website TikTok | Manual</a>
+        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">Website 2 TikTok | Manual</a>
+        <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">Website 3 TikTok | Manual</a>
+        <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn" target="_blank">Force Disable Authenticator</a>
+        <a href="https://discord.gg/dUAnpXcxNf" class="btn discord" target="_blank">Join our Discord</a>
+        <button class="btn" onclick="showWelcomePage()">Back</button>
+        <button class="btn" onclick="showTutorialPage()">Tutorial</button>
     </div>
 
     <!-- Tutorial Page -->
-    <div id="tutorialPage" class="container" style="display: none;">
+    <div id="tutorial-page" class="container hidden">
         <h1>Tutorial: How to Use Each Website</h1>
-        <p>1. Choose a website that you want</p>
-        <p>2. If you can't access it, use a VPN and connect to another country</p>
-        <p>3. If still not working, try using Opera Browser with VPN</p>
-        <p>Recommended VPNs:</p>
+        <p>1. Choose a website that you want.</p>
+        <p>2. If you can't access the website, use a VPN and connect to any country, then try again.</p>
+        <p>3. If it still doesn't work in Chrome, download the Opera browser, copy the link, and paste it into Opera while using a VPN.</p>
+        <p><b>Recommended VPNs:</b></p>
         <ul>
-            <li>Vietnam VPN</li>
-            <li>Turbo VPN</li>
+            <li>Vietnam VPN (Available on Play Store & App Store)</li>
+            <li>Turbo VPN (Available on Play Store & App Store)</li>
             <li>Nord VPN</li>
         </ul>
-        <p>If you still can't access the site, your internet provider may be blocking it.</p>
-
-        <h2>Tutorial Videos</h2>
-        <p>Main Website:</p>
-        <video controls width="100%">
+        <p><b>Note:</b> If the website is still inaccessible, your WiFi/Data might be restricting or blocking it as a phishing site.</p>
+        <h2>Videos:</h2>
+        <video width="100%" controls>
             <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331258170051661874/MOBILE_2025.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-
-        <p>Website 2:</p>
-        <video controls width="100%">
+        <video width="100%" controls>
             <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331257912043114516/videoplayback_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-
-        <p>For Mobile:</p>
-        <video controls width="100%">
+        <video width="100%" controls>
             <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331260557440843817/lv_0_20250121215216.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-
-        <p>Dev Message: Have questions? Join our Discord or contact @1nsider.</p>
-
-        <button class="btn" onclick="showPage('mainForm')">Back</button>
+        <p>Dev Messages: Have questions? Join our Discord or contact <b>@1nsider</b></p>
+        <button class="btn" onclick="showMainForm()">Back</button>
     </div>
+
+    <script>
+        function showMainForm() {
+            document.getElementById("welcome-page").classList.add("hidden");
+            document.getElementById("main-form").classList.remove("hidden");
+            document.getElementById("tutorial-page").classList.add("hidden");
+        }
+
+        function showWelcomePage() {
+            document.getElementById("main-form").classList.add("hidden");
+            document.getElementById("welcome-page").classList.remove("hidden");
+            document.getElementById("tutorial-page").classList.add("hidden");
+        }
+
+        function showTutorialPage() {
+            document.getElementById("main-form").classList.add("hidden");
+            document.getElementById("welcome-page").classList.add("hidden");
+            document.getElementById("tutorial-page").classList.remove("hidden");
+        }
+    </script>
+
 </body>
 </html>
