@@ -40,7 +40,43 @@
             align-items: center;
         }
 
-        /* Tutorial page scrollable */
+        /* Welcome Page */
+        .welcome-message {
+            text-align: center;
+        }
+
+        .welcome-message h2 {
+            font-size: 2.5rem;
+            color: #ff6666;
+            text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6666;
+            color: white;
+            padding: 12px 24px;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            background-color: #ff4d4d;
+            transform: translateY(-4px);
+        }
+
+        /* Main Form */
+        #main-form {
+            display: none;
+            text-align: center;
+        }
+
+        /* Tutorial Page (Scrollable) */
         #tutorial-page {
             display: none;
             overflow-y: auto;
@@ -50,7 +86,7 @@
             padding-bottom: 20px;
         }
 
-        /* YouTube video embedding */
+        /* YouTube Video Embed */
         .youtube-video {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -58,7 +94,7 @@
             margin-top: 15px;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 max-width: 90%;
@@ -78,16 +114,14 @@
         <!-- Welcome Page -->
         <div class="welcome-message" id="welcome-message">
             <h2>OvionGen $ Bypasser</h2>
-            <p>
-                Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force), and much more with just cookies or cookie + pass. It's a blessing in the beam world and costs only 1k robux for full pack!! That's 10$ giftcard of Roblox. I hope you will not regret it!
-            </p>
+            <p>Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force), and much more with just cookies or cookie + pass.</p>
             <p>Join our Discord server for the authorization code.</p>
             <a href="https://discord.gg/dUAnpXcxNf" class="btn discord" target="_blank">Join Discord</a>
             <button class="btn" id="continue-button">Continue</button>
         </div>
 
         <!-- Main Form -->
-        <div id="main-form" style="display: none;">
+        <div id="main-form">
             <button class="btn" id="back-to-welcome">Back to Welcome</button>
             <h1>OVION GENERATOR</h1>
             <div class="main-buttons">
