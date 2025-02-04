@@ -2,169 +2,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Dark Themed Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OvionGen</title>
     <style>
-        /* Reset margin and padding for body and html */
-        html, body {
+        /* General resets and styling */
+        body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            width: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg?ex=67a33ca9&is=67a1eb29&hm=7c62b1da5681547de90cc4669bd4c8fd63d0c8a2e30a7e7140588e92017674cb&') no-repeat center center fixed;
+            background-size: cover;
             color: white;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
-            overflow: hidden;
-            background-color: #111111; /* Dark theme background */
-            background-image: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg?ex=67a33ca9&is=67a1eb29&hm=7c62b1da5681547de90cc4669bd4c8fd63d0c8a2e30a7e7140588e92017674cb&');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
 
-        /* Main content container */
         .container {
-            background-color: rgba(26, 26, 26, 0.85); /* Dark background for the form */
+            background-color: rgba(26, 26, 26, 0.85);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
-            width: 100%;
             max-width: 600px;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Welcome message styling */
-        .welcome-message {
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            color: #f0f0f0;
+            width: 100%;
             text-align: center;
-            line-height: 1.6;
-            font-weight: 400;
         }
 
-        /* Neon title effect */
-        .welcome-message h2 {
+        h1 {
             font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: #ff6666; /* Neon Red for neon effect */
+            color: #ff4d4d;
             text-transform: uppercase;
-            text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff6666;
+            margin-bottom: 20px;
         }
 
-        /* Neon style for buttons */
         .btn {
             display: inline-block;
-            background-color: #ff6666; /* Light red color for all buttons */
+            background-color: #ff4d4d;
             color: white;
-            padding: 12px 24px;
+            padding: 14px 26px;
             margin: 10px 0;
             text-decoration: none;
             border-radius: 8px;
             font-size: 1.1rem;
             transition: all 0.3s ease-in-out;
-            text-align: center;
-            white-space: nowrap; /* Prevents text from wrapping */
         }
 
         .btn:hover {
-            background-color: #ff4d4d; /* Darker red on hover */
-            transform: translateY(-4px);
+            background-color: #e62e2e;
         }
 
         .btn.discord {
-            background-color: #ff6666; /* Light red color */
+            background-color: #7289da;
         }
 
         .btn.discord:hover {
-            background-color: #ff4d4d;
+            background-color: #5b6e96;
         }
 
-        /* Main form */
-        #main-form {
-            display: none;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: white;
-            text-align: center;
+        /* Tutorial Section */
+        .tutorial {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 20px 0;
         }
 
-        /* Responsive Design */
+        /* Responsive design */
         @media (max-width: 768px) {
-            .container {
-                max-width: 90%;
-                padding: 30px;
-            }
-            .welcome-message h2 {
+            h1 {
                 font-size: 2.5rem;
             }
-            .btn {
-                padding: 12px 22px;
-                font-size: 1rem;
+
+            .container {
+                padding: 30px;
             }
         }
 
         @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
             .container {
                 padding: 20px;
             }
-            .welcome-message h2 {
-                font-size: 2rem;
-            }
+
             .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
+                padding: 12px 20px;
+                font-size: 1rem;
             }
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Welcome message with neon title -->
-        <div class="welcome-message" id="welcome-message">
-            <h2>OvionGen $ Bypasser</h2>
-            <p>
-                Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass, it's a blessing in beam world
-            </p>
-            <p>Join our Discord server for the authorization code.</p>
-            <!-- Discord button -->
-            <a href="https://discord.gg/dUAnpXcxNf" class="btn discord" target="_blank">Join Discord</a>
-            <!-- Continue Button -->
-            <button class="btn" id="continue-button">Continue</button>
-        </div>
 
-        <!-- Main form (hidden initially) -->
-        <div id="main-form">
-            <button class="btn" id="back-to-welcome">Back to Welcome</button>
-            <h1>OVION GENERATOR</h1>
-            <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
-            <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
-            <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">WEBSITE 3 TIKTOK|MANUAL</a>
-            <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn" target="_blank">Force Disable Authenticator</a>
-            <a href="https://muharrem.live/BypassAge/OnlyCookie/Muharrem" class="btn" target="_blank">Force 13+</a>
-        </div>
+<!-- Welcome Page -->
+<div class="container" id="welcome">
+    <h1>Welcome to OvionGen</h1>
+    <p>Presenting you OvionGen $ Bypasser. It helps bypass authenticator, remove mail by changing age, and more with just cookies or cookie + pass. Only 1k robux for full pack! Don't regret!</p>
+    <a href="#tutorial" class="btn">Continue to Tutorial</a>
+</div>
+
+<!-- Tutorial Page -->
+<div class="container" id="tutorial" style="display: none;">
+    <h1>TUTORIAL HOW TO USE EACH WEBSITE</h1>
+    <div class="tutorial">
+        <p>1. Choose a website that you want.</p>
+        <p>2. If you can't access this website, use VPN and try again.</p>
+        <p>3. If still not working, try using Opera browser with VPN.</p>
+        <p>VPN Options:</p>
+        <ul>
+            <li>Vietnam VPN (Available on Play Store/App Store)</li>
+            <li>Turbo VPN (Available on Play Store/App Store)</li>
+            <li>Nord VPN</li>
+        </ul>
+        <p>Note: If still can't access, your wifi/data might block the website due to phishing detection.</p>
+
+        <p><strong>Tutorial Videos:</strong></p>
+        <ul>
+            <li>Website Main Video: <a href="https://cdn.discordapp.com/attachments/1331252027447050360/1331258170051661874/MOBILE_2025.mp4?ex=67a2c289&is=67a17109&hm=c77d43e5521e3347da08ffeaee22296f8ebf7ed259fbfd1e6f947cd6498b9729&" target="_blank">Watch</a></li>
+            <li>Website 2 Video: <a href="https://cdn.discordapp.com/attachments/1331252027447050360/1331257912043114516/videoplayback_2.mp4?ex=67a2c24b&is=67a170cb&hm=c19b42bcf477b0e920ffbd28459ed4b8425e87d868ad39fcb79130f695a6c062&" target="_blank">Watch</a></li>
+            <li>Mobile Device Tutorial: <a href="https://cdn.discordapp.com/attachments/1331252027447050360/1331260557440843817/lv_0_20250121215216.mp4?ex=67a2c4c2&is=67a17342&hm=647a0afd827e597160fed779cd2af7557d6759c1616afb95c9d3349404befc55&" target="_blank">Watch</a></li>
+        </ul>
+        <p>For more questions, join our <a href="https://discord.gg/dUAnpXcxNf" class="btn discord" target="_blank">Discord Server</a></p>
+        <a href="#welcome" class="btn">Back to Welcome</a>
     </div>
+</div>
 
-    <script>
-        // JavaScript to handle transitions between pages
-        document.getElementById('continue-button').addEventListener('click', function() {
-            document.getElementById('welcome-message').style.display = 'none';
-            document.getElementById('main-form').style.display = 'block';
-        });
+<!-- Main Form (this page remains unchanged) -->
 
-        // Back button functionality
-        document.getElementById('back-to-welcome').addEventListener('click', function() {
-            document.getElementById('main-form').style.display = 'none';
-            document.getElementById('welcome-message').style.display = 'block';
-        });
-    </script>
+<script>
+    // Show/hide tutorial and welcome sections
+    document.querySelector('.btn').addEventListener('click', function() {
+        document.getElementById('welcome').style.display = 'none';
+        document.getElementById('tutorial').style.display = 'block';
+    });
+</script>
+
 </body>
 </html>
