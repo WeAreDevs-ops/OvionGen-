@@ -88,21 +88,13 @@
             background-color: #ff4d4d;
         }
 
-        /* Authorization form */
-        #auth-form {
+        /* Main form */
+        #main-form {
+            display: none;
             margin-top: 20px;
             font-size: 1.2rem;
             color: white;
             text-align: center;
-        }
-
-        /* Authorization input */
-        #auth-form input {
-            padding: 10px;
-            font-size: 1rem;
-            margin: 10px;
-            border-radius: 8px;
-            border: none;
         }
 
         /* Responsive Design */
@@ -140,7 +132,7 @@
         <div class="welcome-message" id="welcome-message">
             <h2>OvionGen $ Bypasser</h2>
             <p>
-                Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass, it's a blessing in beam world
+                Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass, it's a blessing in beam world and costs only 1k robux for full pack!! That's 10$ giftcard of Roblox. I hope you will not regret!
             </p>
             <p>Join our Discord server for the authorization code.</p>
             <!-- Discord button -->
@@ -149,17 +141,9 @@
             <button class="btn" id="continue-button">Continue</button>
         </div>
 
-        <!-- Authorization form (hidden initially) -->
-        <div id="auth-form" style="display: none;">
-            <button class="btn" id="back-to-welcome">Back to Welcome</button>
-            <h3>Enter the authorization code</h3>
-            <input type="text" id="auth-code" placeholder="Enter Code" />
-            <button class="btn" id="auth-submit">Submit</button>
-        </div>
-
         <!-- Main form (hidden initially) -->
-        <div id="main-form" style="display: none;">
-            <button class="btn" id="back-to-auth">Back to Authorization</button>
+        <div id="main-form">
+            <button class="btn" id="back-to-welcome">Back to Welcome</button>
             <h1>OVION GENERATOR</h1>
             <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
             <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
@@ -173,28 +157,13 @@
         // JavaScript to handle transitions between pages
         document.getElementById('continue-button').addEventListener('click', function() {
             document.getElementById('welcome-message').style.display = 'none';
-            document.getElementById('auth-form').style.display = 'block';
+            document.getElementById('main-form').style.display = 'block';
         });
 
-        document.getElementById('auth-submit').addEventListener('click', function() {
-            const code = document.getElementById('auth-code').value;
-            if (code === "OvionGen-27242") {
-                document.getElementById('auth-form').style.display = 'none';
-                document.getElementById('main-form').style.display = 'block';
-            } else {
-                alert("Invalid code! Please try again.");
-            }
-        });
-
-        // Back buttons functionality
+        // Back button functionality
         document.getElementById('back-to-welcome').addEventListener('click', function() {
-            document.getElementById('auth-form').style.display = 'none';
-            document.getElementById('welcome-message').style.display = 'block';
-        });
-
-        document.getElementById('back-to-auth').addEventListener('click', function() {
             document.getElementById('main-form').style.display = 'none';
-            document.getElementById('auth-form').style.display = 'block';
+            document.getElementById('welcome-message').style.display = 'block';
         });
     </script>
 </body>
