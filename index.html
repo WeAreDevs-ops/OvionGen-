@@ -2,144 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OvionGen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Ovion Generator</title>
     <style>
-        /* General resets and styling */
-        body, html {
+        /* General Styling */
+        html, body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg?ex=67a33ca9&is=67a1eb29&hm=7c62b1da5681547de90cc4669bd4c8fd63d0c8a2e30a7e7140588e92017674cb&') no-repeat center center fixed;
-            background-size: cover;
             color: white;
-            height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg') no-repeat center center;
+            background-size: cover;
         }
 
         .container {
             background-color: rgba(26, 26, 26, 0.85);
-            padding: 40px;
-            border-radius: 20px;
+            padding: 30px;
+            border-radius: 15px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+            width: 90%;
             max-width: 600px;
-            width: 100%;
-            text-align: center;
+            position: relative;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
             color: #ff4d4d;
             text-transform: uppercase;
-            margin-bottom: 20px;
         }
 
         .btn {
             display: inline-block;
             background-color: #ff4d4d;
             color: white;
-            padding: 14px 26px;
-            margin: 10px 0;
+            padding: 10px 20px;
+            margin: 8px 0;
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 5px;
+            font-size: 1rem;
             transition: all 0.3s ease-in-out;
         }
 
         .btn:hover {
-            background-color: #e62e2e;
+            background-color: #cc0000;
+            transform: translateY(-3px);
         }
 
-        .btn.discord {
-            background-color: #7289da;
-        }
-
-        .btn.discord:hover {
-            background-color: #5b6e96;
-        }
-
-        /* Tutorial Section */
-        .tutorial {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin: 20px 0;
-        }
-
-        /* Responsive design */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
             .container {
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .container {
+                max-width: 90%;
                 padding: 20px;
             }
-
+            h1 {
+                font-size: 1.8rem;
+            }
             .btn {
-                padding: 12px 20px;
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
         }
 
     </style>
+    <script>
+        function showPage(page) {
+            document.getElementById('welcomePage').style.display = 'none';
+            document.getElementById('mainForm').style.display = 'none';
+            document.getElementById('tutorialPage').style.display = 'none';
+            document.getElementById(page).style.display = 'flex';
+        }
+    </script>
 </head>
 <body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="container">
+        <h1>OvionGen $ Bypasser</h1>
+        <p>Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass. Costs only 1k robux for full pack!</p>
+        <a href="https://discord.gg/dUAnpXcxNf" class="btn">Join Discord for Code</a>
+        <button class="btn" onclick="showPage('mainForm')">Continue</button>
+    </div>
 
-<!-- Welcome Page -->
-<div class="container" id="welcome">
-    <h1>Welcome to OvionGen</h1>
-    <p>Presenting you OvionGen $ Bypasser. It helps bypass authenticator, remove mail by changing age, and more with just cookies or cookie + pass. Only 1k robux for full pack! Don't regret!</p>
-    <a href="#tutorial" class="btn">Continue to Tutorial</a>
-</div>
+    <!-- Main Form -->
+    <div id="mainForm" class="container" style="display: none;">
+        <h1>Ovion Generator</h1>
+        <a href="https://www.genned.net/auth/ovion" class="btn">Main Website</a>
+        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn">Website 2</a>
+        <a href="https://is.gd/xXSfJ8" class="btn">Website 3</a>
+        <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn">Force Disable Authenticator</a>
+        <a href="https://discord.gg/BDwX2k5xre" class="btn">Join our Discord</a>
+        <button class="btn" onclick="showPage('welcomePage')">Back</button>
+        <button class="btn" onclick="showPage('tutorialPage')">Tutorial</button>
+    </div>
 
-<!-- Tutorial Page -->
-<div class="container" id="tutorial" style="display: none;">
-    <h1>TUTORIAL HOW TO USE EACH WEBSITE</h1>
-    <div class="tutorial">
-        <p>1. Choose a website that you want.</p>
-        <p>2. If you can't access this website, use VPN and try again.</p>
-        <p>3. If still not working, try using Opera browser with VPN.</p>
-        <p>VPN Options:</p>
+    <!-- Tutorial Page -->
+    <div id="tutorialPage" class="container" style="display: none;">
+        <h1>Tutorial: How to Use Each Website</h1>
+        <p>1. Choose a website that you want</p>
+        <p>2. If you can't access it, use a VPN and connect to another country</p>
+        <p>3. If still not working, try using Opera Browser with VPN</p>
+        <p>Recommended VPNs:</p>
         <ul>
-            <li>Vietnam VPN (Available on Play Store/App Store)</li>
-            <li>Turbo VPN (Available on Play Store/App Store)</li>
+            <li>Vietnam VPN</li>
+            <li>Turbo VPN</li>
             <li>Nord VPN</li>
         </ul>
-        <p>Note: If still can't access, your wifi/data might block the website due to phishing detection.</p>
+        <p>If you still can't access the site, your internet provider may be blocking it.</p>
 
-        <p><strong>Tutorial Videos:</strong></p>
-        <ul>
-            <li>Website Main Video: <a href="https://cdn.discordapp.com/attachments/1331252027447050360/1331258170051661874/MOBILE_2025.mp4?ex=67a2c289&is=67a17109&hm=c77d43e5521e3347da08ffeaee22296f8ebf7ed259fbfd1e6f947cd6498b9729&" target="_blank">Watch</a></li>
-            <li>Website 2 Video: <a href="https://cdn.discordapp.com/attachments/1331252027447050360/1331257912043114516/videoplayback_2.mp4?ex=67a2c24b&is=67a170cb&hm=c19b42bcf477b0e920ffbd28459ed4b8425e87d868ad39fcb79130f695a6c062&" target="_blank">Watch</a></li>
-            <li>Mobile Device Tutorial: <a href="https://cdn.discordapp.com/attachments/1331252027447050360/1331260557440843817/lv_0_20250121215216.mp4?ex=67a2c4c2&is=67a17342&hm=647a0afd827e597160fed779cd2af7557d6759c1616afb95c9d3349404befc55&" target="_blank">Watch</a></li>
-        </ul>
-        <p>For more questions, join our <a href="https://discord.gg/dUAnpXcxNf" class="btn discord" target="_blank">Discord Server</a></p>
-        <a href="#welcome" class="btn">Back to Welcome</a>
+        <h2>Tutorial Videos</h2>
+        <p>Main Website:</p>
+        <video controls width="100%">
+            <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331258170051661874/MOBILE_2025.mp4" type="video/mp4">
+        </video>
+
+        <p>Website 2:</p>
+        <video controls width="100%">
+            <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331257912043114516/videoplayback_2.mp4" type="video/mp4">
+        </video>
+
+        <p>For Mobile:</p>
+        <video controls width="100%">
+            <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331260557440843817/lv_0_20250121215216.mp4" type="video/mp4">
+        </video>
+
+        <p>Dev Message: Have questions? Join our Discord or contact @1nsider.</p>
+
+        <button class="btn" onclick="showPage('mainForm')">Back</button>
     </div>
-</div>
-
-<!-- Main Form (this page remains unchanged) -->
-
-<script>
-    // Show/hide tutorial and welcome sections
-    document.querySelector('.btn').addEventListener('click', function() {
-        document.getElementById('welcome').style.display = 'none';
-        document.getElementById('tutorial').style.display = 'block';
-    });
-</script>
-
 </body>
 </html>
