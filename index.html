@@ -39,11 +39,11 @@
         /* Main content container */
         .container {
             background-color: rgba(26, 26, 26, 0.85);
-            padding: 30px;
+            padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
-            max-width: 400px;
             width: 90%;
+            max-width: 600px; /* Bigger form for desktop */
             position: relative;
             z-index: 2;
             display: flex;
@@ -52,7 +52,7 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 20px;
             font-weight: 600;
             color: red;
@@ -63,14 +63,14 @@
             display: inline-block;
             background-color: #007BFF;
             color: white;
-            padding: 12px 24px;
-            margin: 8px 0;
+            padding: 14px 26px;
+            margin: 10px 0;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease-in-out;
             width: 100%;
-            max-width: 350px;
+            max-width: 450px;
             text-align: center;
         }
 
@@ -87,11 +87,24 @@
             background-color: #5b6e96;
         }
 
-        /* Ensure proper scaling on smaller screens */
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 90%;
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 1rem;
+            }
+        }
+
         @media (max-width: 480px) {
             .container {
                 padding: 20px;
-                max-width: 90%;
             }
             h1 {
                 font-size: 1.8rem;
@@ -102,11 +115,6 @@
             }
         }
 
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 500px;
-            }
-        }
     </style>
 </head>
 <body>
