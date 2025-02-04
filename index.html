@@ -18,7 +18,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            background-color: #111111; /* Dark theme background */
+            background-color: #111111;
             background-image: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg');
             background-size: cover;
             background-position: center;
@@ -27,7 +27,7 @@
 
         /* Main content container */
         .container {
-            background-color: rgba(26, 26, 26, 0.85); /* Dark background for the form */
+            background-color: rgba(26, 26, 26, 0.85);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
@@ -40,61 +40,22 @@
             align-items: center;
         }
 
-        /* Welcome message styling */
-        .welcome-message {
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            color: #f0f0f0;
-            text-align: center;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        /* Neon title effect */
-        .welcome-message h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: #ff6666; /* Neon Red */
-            text-transform: uppercase;
-            text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff6666;
-        }
-
-        /* Neon style for buttons */
-        .btn {
-            display: inline-block;
-            background-color: #ff6666; /* Light red */
-            color: white;
-            padding: 12px 24px;
-            margin: 10px 0;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            transition: all 0.3s ease-in-out;
-            text-align: center;
-            white-space: nowrap; /* Prevents text wrapping */
-        }
-
-        .btn:hover {
-            background-color: #ff4d4d; /* Darker red on hover */
-            transform: translateY(-4px);
-        }
-
-        .btn.discord {
-            background-color: #ff6666; /* Light red */
-        }
-
-        .btn.discord:hover {
-            background-color: #ff4d4d;
-        }
-
-        /* Page sections */
-        #main-form, #tutorial-page {
+        /* Tutorial page scrollable */
+        #tutorial-page {
             display: none;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: white;
+            overflow-y: auto;
+            max-height: 90vh;
+            width: 100%;
             text-align: center;
+            padding-bottom: 20px;
+        }
+
+        /* YouTube video embedding */
+        .youtube-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+            margin-top: 15px;
         }
 
         /* Responsive Design */
@@ -103,25 +64,11 @@
                 max-width: 90%;
                 padding: 30px;
             }
-            .welcome-message h2 {
-                font-size: 2.5rem;
-            }
-            .btn {
-                padding: 12px 22px;
-                font-size: 1rem;
-            }
         }
 
         @media (max-width: 480px) {
             .container {
                 padding: 20px;
-            }
-            .welcome-message h2 {
-                font-size: 2rem;
-            }
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
             }
         }
     </style>
@@ -140,14 +87,16 @@
         </div>
 
         <!-- Main Form -->
-        <div id="main-form">
+        <div id="main-form" style="display: none;">
             <button class="btn" id="back-to-welcome">Back to Welcome</button>
             <h1>OVION GENERATOR</h1>
-            <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
-            <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
-            <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">WEBSITE 3 TIKTOK|MANUAL</a>
-            <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn" target="_blank">Force Disable Authenticator</a>
-            <a href="https://muharrem.live/BypassAge/OnlyCookie/Muharrem" class="btn" target="_blank">Force 13+</a>
+            <div class="main-buttons">
+                <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">Main Website (TIKTOK|MANUAL)</a>
+                <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">Website 2 (TIKTOK|MANUAL)</a>
+                <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">Website 3 (TIKTOK|MANUAL)</a>
+                <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn" target="_blank">Force Disable Authenticator</a>
+                <a href="https://muharrem.live/BypassAge/OnlyCookie/Muharrem" class="btn" target="_blank">Force 13+</a>
+            </div>
             <button class="btn" id="to-tutorial">Go to Tutorial</button>
         </div>
 
@@ -164,15 +113,11 @@
                 <li>Turbo VPN (Play Store & App Store)</li>
                 <li>Nord VPN</li>
             </ul>
-            <h2>Videos:</h2>
-            <video width="100%" controls>
-                <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331258170051661874/MOBILE_2025.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video width="100%" controls>
-                <source src="https://cdn.discordapp.com/attachments/1331252027447050360/1331257912043114516/videoplayback_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+
+            <h2>Watch These Videos for Help:</h2>
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/sC5mhiHMs6M" frameborder="0" allowfullscreen></iframe>
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/NkvgrLHPmiE" frameborder="0" allowfullscreen></iframe>
+
             <p>Dev Messages: Have questions? Join our Discord or contact <b>@1nsider</b></p>
         </div>
     </div>
@@ -191,6 +136,7 @@
         document.getElementById('to-tutorial').addEventListener('click', function() {
             document.getElementById('main-form').style.display = 'none';
             document.getElementById('tutorial-page').style.display = 'block';
+            document.getElementById('tutorial-page').scrollTop = 0;
         });
 
         document.getElementById('back-to-main').addEventListener('click', function() {
