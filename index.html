@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <title>Dark Themed Website</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
         /* Disable zoom */
         html, body {
@@ -23,17 +24,14 @@
             overflow: hidden;
         }
 
-        /* Make the background GIF cover the full screen */
-        body::before {
-            content: "";
-            position: fixed;
+        /* Particles background */
+        #particles-js {
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: url('https://cdn.discordapp.com/attachments/1322439578841518140/1336148689118564423/standard_3.gif?ex=67a2c0ef&is=67a16f6f&hm=9ecd6cbb618c59e864765e5f34a34be7256418833b337da395f6c3431101b8ae&') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
         }
 
         /* Main content container */
@@ -51,14 +49,27 @@
             align-items: center;
         }
 
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: red;
-            text-transform: uppercase;
+        /* Welcome message styling */
+        .welcome-message {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+            text-align: center;
+            line-height: 1.6;
+            font-weight: 400;
         }
 
+        /* Neon title effect */
+        .welcome-message h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #ff00ff;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+        }
+
+        /* Neon style for continue button */
         .btn {
             display: inline-block;
             background-color: #007BFF;
@@ -85,6 +96,24 @@
 
         .btn.discord:hover {
             background-color: #5b6e96;
+        }
+
+        /* Authorization form */
+        #auth-form {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+        }
+
+        /* Authorization input */
+        #auth-form input {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
         }
 
         /* Responsive Design */
@@ -114,17 +143,152 @@
                 font-size: 0.9rem;
             }
         }
-
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="container">
-        <h1>OVION GENERATOR</h1>
-        <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
-        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
-        <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">WEBSITE 3 TIKTOK|MANUAL</a>
-        <a href="https://discord.gg/BDwX2k5xre" class="btn discord" target="_blank">Join our Discord</a>
-        <a href="https://muharrem.live/BypassAge/OnlyCookie/Muharrem" class="btn" target="_blank">Force 13+</a>
+        <!-- Welcome message with neon title -->
+        <div class="welcome-message">
+            <h2>OvionGen $ Bypasser</h2>
+            <p>
+                Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass, it's a blessing in beam world and costs only 1k robux for full pack!! That's 10$ giftcard of Roblox. I hope you will not regret!
+            </p>
+        </div>
+
+        <!-- Continue button -->
+        <a href="#" class="btn" id="continue-btn">Continue to Form</a>
+
+        <!-- Authorization form (hidden initially) -->
+        <div id="auth-form">
+            <h3>Enter the authorization code</h3>
+            <input type="text" id="auth-code" placeholder="Enter Code" />
+            <button class="btn" id="auth-submit">Submit</button>
+        </div>
+
+        <!-- Main form (hidden initially) -->
+        <div id="main-form" style="display: none;">
+            <h1>OVION GENERATOR</h1>
+            <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
+            <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
+            <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">WEBSITE 3 TIKTOK|MANUAL</a>
+            <a href="https://discord.gg/BDwX2k5xre" class="btn discord" target="_blank">Join our Discord</a>
+            <a href="https://muharrem.live/BypassAge/OnlyCookie/Muharrem" class="btn" target="_blank">Force 13+</a>
+        </div>
     </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles": {
+                            "number": 4
+                        }
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // JavaScript to handle the transition
+        document.getElementById('continue-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.welcome-message').style.display = 'none';
+            document.getElementById('auth-form').style.display = 'block';
+        });
+
+        // Validate authorization code
+        document.getElementById('auth-submit').addEventListener('click', function() {
+            const code = document.getElementById('auth-code').value;
+            if (code === "OvionGen-27242") {
+                document.getElementById('auth-form').style.display = 'none';
+                document.getElementById('main-form').style.display = 'block';
+            } else {
+                alert("Invalid code! Please try again.");
+            }
+        });
+    </script>
 </body>
 </html>
