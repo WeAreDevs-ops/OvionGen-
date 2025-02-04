@@ -66,12 +66,12 @@
             text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff6666;
         }
 
-        /* Neon style for submit button */
+        /* Neon style for buttons */
         .btn {
             display: inline-block;
             background-color: #007BFF;
             color: white;
-            padding: 14px 26px;
+            padding: 12px 24px;
             margin: 10px 0;
             text-decoration: none;
             border-radius: 8px;
@@ -146,7 +146,7 @@
 
     <div class="container">
         <!-- Welcome message with neon title -->
-        <div class="welcome-message">
+        <div class="welcome-message" id="welcome-message">
             <h2>OvionGen $ Bypasser</h2>
             <p>
                 Presenting you OvionGen $ Bypasser with features like bypass authenticator, remove mail by changing age (force) and much more with just cookies or cookie + pass, it's a blessing in beam world and costs only 1k robux for full pack!! That's 10$ giftcard of Roblox. I hope you will not regret!
@@ -160,6 +160,7 @@
 
         <!-- Authorization form (hidden initially) -->
         <div id="auth-form" style="display: none;">
+            <button class="btn" id="back-to-welcome">Back to Welcome</button>
             <h3>Enter the authorization code</h3>
             <input type="text" id="auth-code" placeholder="Enter Code" />
             <button class="btn" id="auth-submit">Submit</button>
@@ -167,6 +168,7 @@
 
         <!-- Main form (hidden initially) -->
         <div id="main-form" style="display: none;">
+            <button class="btn" id="back-to-auth">Back to Authorization</button>
             <h1>OVION GENERATOR</h1>
             <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
             <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
@@ -252,9 +254,9 @@
             "retina_detect": true
         });
         
-        // JavaScript to handle the transition
+        // JavaScript to handle transitions between pages
         document.getElementById('continue-button').addEventListener('click', function() {
-            document.querySelector('.welcome-message').style.display = 'none';
+            document.getElementById('welcome-message').style.display = 'none';
             document.getElementById('auth-form').style.display = 'block';
         });
 
@@ -266,6 +268,17 @@
             } else {
                 alert("Invalid code! Please try again.");
             }
+        });
+
+        // Back buttons functionality
+        document.getElementById('back-to-welcome').addEventListener('click', function() {
+            document.getElementById('auth-form').style.display = 'none';
+            document.getElementById('welcome-message').style.display = 'block';
+        });
+
+        document.getElementById('back-to-auth').addEventListener('click', function() {
+            document.getElementById('main-form').style.display = 'none';
+            document.getElementById('auth-form').style.display = 'block';
         });
     </script>
 </body>
