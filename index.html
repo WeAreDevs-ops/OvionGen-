@@ -23,7 +23,7 @@
             overflow: hidden;
         }
 
-        /* Background GIF */
+        /* Responsive background GIF */
         body::before {
             content: "";
             position: absolute;
@@ -33,17 +33,18 @@
             height: 100%;
             background: url('https://cdn.discordapp.com/attachments/1322439578841518140/1336148689118564423/standard_3.gif?ex=67a2c0ef&is=67a16f6f&hm=9ecd6cbb618c59e864765e5f34a34be7256418833b337da395f6c3431101b8ae&') no-repeat center center;
             background-size: cover;
+            background-attachment: fixed;
             z-index: -1;
         }
 
         /* Main content container */
         .container {
-            background-color: rgba(26, 26, 26, 0.8);
+            background-color: rgba(26, 26, 26, 0.85);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
             max-width: 450px;
-            width: 100%;
+            width: 90%;
             position: relative;
             z-index: 2; /* Ensure content is above background */
         }
@@ -61,12 +62,13 @@
             background-color: #007BFF;
             color: white;
             padding: 16px 30px;
-            margin: 15px 0;
+            margin: 10px 0;
             text-decoration: none;
             border-radius: 8px;
             font-size: 1.1rem;
             transition: all 0.3s ease-in-out;
-            width: calc(100% - 40px);
+            width: 100%;
+            max-width: 400px;
         }
 
         .btn:hover {
@@ -82,14 +84,13 @@
             background-color: #5b6e96;
         }
 
-        /* Change placeholder text color to black */
-        ::placeholder {
-            color: black;
-        }
-
+        /* Ensure buttons don't overflow on small screens */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
+            }
+            .container {
+                padding: 30px;
             }
             .btn {
                 padding: 14px 20px;
