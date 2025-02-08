@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Tutorial - How to Use</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OvionGen Website</title>
     <style>
+        /* General Styling */
         html, body {
             margin: 0;
             padding: 0;
@@ -13,92 +14,112 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            background-color: #111111;
-            background-image: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg?ex=67a33ca9&is=67a1eb29&hm=7c62b1da568154');
+            background-color: #111;
+            background-image: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            overflow-y: auto;
+            overflow: hidden;
         }
 
+        /* Container */
         .container {
-            background-color: rgba(26, 26, 26, 0.85);
-            padding: 40px;
-            border-radius: 20px;
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
             width: 90%;
-            max-width: 800px;
+            max-width: 600px;
             text-align: center;
-            margin: 20px 0;
         }
 
+        /* Title */
         h1 {
+            font-size: 2.5rem;
             color: #ff6666;
             text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666;
+            text-transform: uppercase;
         }
 
-        .video-container {
-            margin-top: 20px;
-        }
-
-        iframe {
-            width: 100%;
-            height: 315px;
-            border: none;
-            border-radius: 10px;
-        }
-
+        /* Buttons */
         .btn {
-            display: inline-block;
-            background-color: grey;
+            display: block;
+            background-color: #ff6666;
             color: white;
-            padding: 12px 24px;
+            padding: 12px;
             margin: 10px 0;
-            text-decoration: none;
             border-radius: 8px;
-            font-size: 1.1rem;
+            text-decoration: none;
+            font-size: 1rem;
             transition: all 0.3s ease-in-out;
-            text-align: center;
         }
 
         .btn:hover {
-            background-color: #777;
+            background-color: #ff4d4d;
+        }
+
+        .btn.discord { background-color: #5865F2; }
+        .btn.discord:hover { background-color: #4752C4; }
+
+        .btn.grey { background-color: grey; }
+        .btn.grey:hover { background-color: darkgrey; }
+
+        /* Hidden Pages */
+        .page { display: none; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .btn { padding: 10px; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Tutorial - How to Use Each Website</h1>
-        <p>1. Choose a website that you want.</p>
-        <p>2. If you can't access the website, use a VPN and connect to any country.</p>
-        <p>3. If still not working, download **Opera Browser**, copy the website link, and paste it into Opera (with VPN enabled).</p>
-        <p><b>Recommended VPNs:</b></p>
-        <ul>
-            <li>Vietnam VPN (Available on Play Store & App Store)</li>
-            <li>Turbo VPN (Available on Play Store & App Store)</li>
-            <li>Nord VPN</li>
-        </ul>
-        <p>Note: If you still can't access the website, your WiFi/Data may be blocking it due to security filters.</p>
-
-        <div class="video-container">
-            <h2>Video Tutorial 1</h2>
-            <iframe src="https://www.youtube.com/embed/sC5mhiHMs6M" allowfullscreen></iframe>
-        </div>
-
-        <div class="video-container">
-            <h2>Video Tutorial 2</h2>
-            <iframe src="https://www.youtube.com/embed/NkvgrLHPmiE" allowfullscreen></iframe>
-        </div>
-
-        <div class="video-container">
-            <h2>Video Tutorial 3</h2>
-            <iframe src="https://www.youtube.com/embed/AusLJ9FOqfI" allowfullscreen></iframe>
-        </div>
-
-        <a href="index.html" class="btn">Back to Generator</a>
+    <!-- MAIN FORM PAGE -->
+    <div class="container" id="main-form">
+        <h1>OVION GENERATOR</h1>
+        <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK | MANUAL</a>
+        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK | MANUAL</a>
+        <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">WEBSITE 3 TIKTOK | MANUAL</a>
+        <a href="https://is.gd/3HAtZu" class="btn" target="_blank">WEBSITE 4 TIKTOK DOMAIN</a>
+        <a class="btn grey" id="go-to-tutorial">Go to Tutorial</a>
     </div>
 
+    <!-- TUTORIAL PAGE -->
+    <div class="container page" id="tutorial-page">
+        <h1>TUTORIAL HOW TO USE</h1>
+        <p>1. Choose a website.</p>
+        <p>2. If you can't access it, use a VPN.</p>
+        <p>3. If still not working, use Opera Browser with a VPN.</p>
+        <p><b>Recommended VPNs:</b></p>
+        <ul>
+            <li>Vietnam VPN (Play Store / App Store)</li>
+            <li>Turbo VPN (Play Store / App Store)</li>
+            <li>Nord VPN</li>
+        </ul>
+        <p><b>Note:</b> If access is still blocked, your internet provider may be restricting it.</p>
+
+        <!-- YouTube Videos -->
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/sC5mhiHMs6M" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/NkvgrLHPmiE" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/AusLJ9FOqfI" frameborder="0" allowfullscreen></iframe>
+
+        <a class="btn grey" id="back-to-main">Back to Generator</a>
+    </div>
+
+    <script>
+        // Page navigation
+        document.getElementById('go-to-tutorial').addEventListener('click', function() {
+            document.getElementById('main-form').style.display = 'none';
+            document.getElementById('tutorial-page').style.display = 'block';
+        });
+
+        document.getElementById('back-to-main').addEventListener('click', function() {
+            document.getElementById('tutorial-page').style.display = 'none';
+            document.getElementById('main-form').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
