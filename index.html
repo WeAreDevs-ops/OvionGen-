@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OvionGen Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>OvionGen & Bypasser</title>
     <style>
-        /* General Styling */
+        /* General Styles */
         html, body {
             margin: 0;
             padding: 0;
@@ -16,92 +16,119 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #111;
-            background-image: url('https://cdn.discordapp.com/attachments/1325765370946125905/1337692501280161832/6e635db96d2ec063583364b3c78b3b01d4cbd1fb_2_690x474.png?ex=67a85eb9&is=67a70d39&hm=4db7dab64e87363450f488a45bd6a35f5a1358f66d7ce82cdf5fe683b96f68e0');
+            position: relative;
+            overflow: hidden;
+            background-color: #111111;
+            background-image: url('https://cdn.discordapp.com/attachments/1325765370946125905/1337692501280161832/6e635db96d2ec063583364b3c78b3b01d4cbd1fb_2_690x474.png?ex=67a85eb9&is=67a70d39&hm=4db7dab64e87363450f488a45bd6a35f5a1358f66d7ce82cdf5fe683b96f68e0&');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Container */
+        /* Main Content Styling */
         .container {
-            background-color: rgba(26, 26, 26, 0.9);
-            padding: 30px;
-            border-radius: 15px;
+            background-color: rgba(26, 26, 26, 0.85);
+            padding: 40px;
+            border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
-            width: 90%;
+            width: 100%;
             max-width: 600px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-        }
-
-        /* Title */
-        h1 {
-            font-size: 2.5rem;
-            color: #ff6666;
-            text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666;
-            text-transform: uppercase;
         }
 
         /* Buttons */
         .btn {
-            display: block;
+            display: inline-block;
             background-color: #ff6666;
             color: white;
-            padding: 12px;
+            padding: 12px 24px;
             margin: 10px 0;
-            border-radius: 8px;
             text-decoration: none;
-            font-size: 1rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
             transition: all 0.3s ease-in-out;
+            text-align: center;
+            white-space: nowrap;
         }
 
         .btn:hover {
             background-color: #ff4d4d;
+            transform: translateY(-4px);
         }
 
-        .btn.discord { background-color: #5865F2; }
-        .btn.discord:hover { background-color: #4752C4; }
+        .btn.discord {
+            background-color: #5865F2;
+        }
 
-        .btn.grey { background-color: grey; }
-        .btn.grey:hover { background-color: darkgrey; }
+        .btn.discord:hover {
+            background-color: #4653C0;
+        }
 
-        /* Hidden Pages */
+        .btn.grey {
+            background-color: #888;
+        }
+
+        .btn.grey:hover {
+            background-color: #777;
+        }
+
+        /* Pages */
         .page {
             display: none;
-            height: 100vh;
-            overflow-y: auto; /* Allows scrolling */
-            padding: 20px;
         }
 
-        /* Responsive */
+        /* Scrollable tutorial page */
+        #tutorial-page {
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .btn { padding: 10px; font-size: 0.9rem; }
+            .container {
+                max-width: 90%;
+                padding: 30px;
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- MAIN FORM PAGE -->
-    <div class="container" id="main-form">
+    <!-- Main Form -->
+    <div class="container page" id="main-form">
         <h1>OVION GENERATOR</h1>
-        <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK | MANUAL</a>
-        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK | MANUAL</a>
-        <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">WEBSITE 3 TIKTOK | MANUAL</a>
-        <a href="https://is.gd/3HAtZu" class="btn" target="_blank">WEBSITE 4 TIKTOK DOMAIN</a>
+        <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
+        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
         <a class="btn grey" id="go-to-tutorial">Go to Tutorial</a>
     </div>
 
-    <!-- TUTORIAL PAGE -->
+    <!-- Tutorial Page -->
     <div class="container page" id="tutorial-page">
         <h1>TUTORIAL HOW TO USE</h1>
         <p>1. Choose a website.</p>
         <p>2. If you can't access it, use a VPN.</p>
         <p>3. If still not working, use Opera Browser with a VPN.</p>
-        <p><b>Recommended VPNs:</b></p>
+        <p><b>Recommended VPN:</b></p>
         <ul>
-            <li>Vietnam VPN (Play Store / App Store)</li>
-            <li>Turbo VPN (Play Store / App Store)</li>
-            <li>Nord VPN</li>
+            <li><a href="https://play.google.com/store/apps/details?id=free.vpnvietnam.unlimited.secure.turbo.unblock.proxy" target="_blank">VIETNAM VPN</a></li>
         </ul>
         <p><b>Note:</b> If access is still blocked, your internet provider may be restricting it.</p>
 
@@ -114,18 +141,19 @@
     </div>
 
     <script>
-        // Page navigation
+        // Page Navigation
         document.getElementById('go-to-tutorial').addEventListener('click', function() {
             document.getElementById('main-form').style.display = 'none';
             document.getElementById('tutorial-page').style.display = 'block';
-            document.body.style.overflow = 'auto'; // Enable scrolling
         });
 
         document.getElementById('back-to-main').addEventListener('click', function() {
             document.getElementById('tutorial-page').style.display = 'none';
             document.getElementById('main-form').style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Disable scrolling on main page
         });
+
+        // Show main form on load
+        document.getElementById('main-form').style.display = 'block';
     </script>
 </body>
 </html>
