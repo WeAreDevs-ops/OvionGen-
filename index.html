@@ -18,7 +18,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            background-color: #111111; /* Dark theme background */
+            background-color: #111111;
             background-image: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg?ex=67a33ca9&is=67a1eb29&hm=7c62b1da5681547de90cc4669bd4c8fd63d0c8a2e30a7e7140588e92017674cb&');
             background-size: cover;
             background-position: center;
@@ -27,7 +27,7 @@
 
         /* Main content container */
         .container {
-            background-color: rgba(26, 26, 26, 0.85); /* Dark background for the form */
+            background-color: rgba(26, 26, 26, 0.85); 
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
@@ -40,12 +40,22 @@
             align-items: center;
         }
 
+        /* Welcome message styling */
+        .welcome-message {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+            text-align: center;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
         /* Neon title effect */
         .welcome-message h2 {
             font-size: 3rem;
             margin-bottom: 20px;
             font-weight: 600;
-            color: #ff6666; /* Neon Red for neon effect */
+            color: #ff6666; 
             text-transform: uppercase;
             text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff6666;
         }
@@ -53,7 +63,7 @@
         /* Neon style for buttons */
         .btn {
             display: inline-block;
-            background-color: #ff6666; /* Light red color for all buttons */
+            background-color: #ff6666; 
             color: white;
             padding: 12px 24px;
             margin: 10px 0;
@@ -62,17 +72,34 @@
             font-size: 1.1rem;
             transition: all 0.3s ease-in-out;
             text-align: center;
-            white-space: nowrap; /* Prevents text from wrapping */
+            white-space: nowrap;
         }
 
         .btn:hover {
-            background-color: #ff4d4d; /* Darker red on hover */
+            background-color: #ff4d4d; 
             transform: translateY(-4px);
+        }
+
+        .btn.discord {
+            background-color: #ff6666; 
+        }
+
+        .btn.discord:hover {
+            background-color: #ff4d4d;
         }
 
         /* Main form */
         #main-form {
             display: block;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+        }
+
+        /* Tutorial page */
+        #tutorial-page {
+            display: none;
             margin-top: 20px;
             font-size: 1.2rem;
             color: white;
@@ -115,16 +142,44 @@
             <h1>OVION GENERATOR</h1>
             <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
             <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
-            <!-- New Websites -->
-            <a href="https://roblox.tg/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn" target="_blank">WEBSITE 3 MANUAL ONLY</a>
-            <a href="https://r.oblox.hk.com/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn" target="_blank">WEBSITE 4 TIKTOK ONLY</a>
-            <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn" target="_blank">Force Disable Authenticator</a>
+            <a href="https://is.gd/xXSfJ8" class="btn" target="_blank">WEBSITE 3 MANUAL ONLY</a>
+            <a href="https://roblox.tg/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn" target="_blank">WEBSITE 4 TIKTOK ONLY</a>
+            <button class="btn" id="go-to-tutorial">Go to Tutorial</button>
+        </div>
+
+        <!-- Tutorial page -->
+        <div id="tutorial-page">
+            <h1>TUTORIAL HOW TO USE EACH WEBSITE</h1>
+            <p>1. Choose a website that you want</p>
+            <p>2. If you can't access this website, use VPN and connect to any country, and try again.</p>
+            <p>3. If still not working, download Opera browser on Chrome and paste the website link there with VPN.</p>
+            <p>VPN Recommendation: <a href="https://play.google.com/store/apps/details?id=free.vpnvietnam.unlimited.secure.turbo.unblock.proxy" class="btn" target="_blank">Vietnam VPN</a></p>
+
+            <h2>Tutorial Video 1</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AusLJ9FOqfI" frameborder="0" allowfullscreen></iframe>
+
+            <h2>Tutorial Video 2</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NkvgrLHPmiE" frameborder="0" allowfullscreen></iframe>
+
+            <h2>Tutorial Video 3</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sC5mhiHMs6M" frameborder="0" allowfullscreen></iframe>
+
+            <button class="btn" id="back-to-form">Back to Generator</button>
         </div>
     </div>
 
     <script>
         // JavaScript to handle transitions between pages
-        // No longer needed as there are no more page transitions
+        document.getElementById('go-to-tutorial').addEventListener('click', function() {
+            document.getElementById('main-form').style.display = 'none';
+            document.getElementById('tutorial-page').style.display = 'block';
+        });
+
+        // Back to main form functionality
+        document.getElementById('back-to-form').addEventListener('click', function() {
+            document.getElementById('tutorial-page').style.display = 'none';
+            document.getElementById('main-form').style.display = 'block';
+        });
     </script>
 </body>
 </html>
