@@ -17,7 +17,6 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            overflow: hidden;
             background-color: #111111; /* Dark theme background */
             background-image: url('https://cdn.discordapp.com/attachments/1325765370946125905/1337692501280161832/6e635db96d2ec063583364b3c78b3b01d4cbd1fb_2_690x474.png?ex=67a85eb9&is=67a70d39&hm=4db7dab64e87363450f488a45bd6a35f5a1358f66d7ce82cdf5fe683b96f68e0&');
             background-size: cover;
@@ -105,9 +104,14 @@
             overflow-y: auto;
         }
 
+        /* Hide tutorial page by default */
+        #tutorial-page {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Main content container -->
     <div class="container">
         <!-- Main form content -->
         <div id="main-form">
@@ -116,17 +120,25 @@
             <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK | MANUAL</a>
             <a href="https://roblox.tg/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn" target="_blank">WEBSITE 3 MANUAL ONLY</a>
             <a href="https://r.oblox.hk.com/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn" target="_blank">WEBSITE 4 TIKTOK ONLY</a>
-            <a href="#tutorial-page" class="btn gray" id="go-to-tutorial">Go to Tutorial</a>
-        </div>
-
-        <!-- Tutorial Page -->
-        <div id="tutorial-page">
-            <h2>Tutorial Page</h2>
-            <p>This is the tutorial section where you will find the explanations and how to use the website.</p>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/AusLJ9FOqfI?si=5xUN3_af9sqS3YR6" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/sC5mhiHMs6M?si=RUtHRlF-j3zuhTa0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/NkvgrLHPmiE?si=Xp_m4h7BIpz3Ep5f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="javascript:void(0)" class="btn gray" id="go-to-tutorial">Go to Tutorial</a>
         </div>
     </div>
+
+    <!-- Tutorial Page -->
+    <div id="tutorial-page" class="container">
+        <h2>Tutorial Page</h2>
+        <p>This is the tutorial section where you will find the explanations and how to use the website.</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/AusLJ9FOqfI?si=5xUN3_af9sqS3YR6" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/sC5mhiHMs6M?si=RUtHRlF-j3zuhTa0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/NkvgrLHPmiE?si=Xp_m4h7BIpz3Ep5f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Show the tutorial page and hide the main form when the button is clicked
+        document.getElementById("go-to-tutorial").onclick = function() {
+            document.getElementById("main-form").style.display = "none";
+            document.getElementById("tutorial-page").style.display = "block";
+        };
+    </script>
 </body>
 </html>
