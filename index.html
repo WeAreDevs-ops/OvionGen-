@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>OvionGen & Bypasser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Dark Themed Website</title>
     <style>
-        /* General Styles */
+        /* Reset margin and padding for body and html */
         html, body {
             margin: 0;
             padding: 0;
@@ -18,16 +18,16 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            background-color: #111111;
-            background-image: url('https://cdn.discordapp.com/attachments/1325765370946125905/1337692501280161832/6e635db96d2ec063583364b3c78b3b01d4cbd1fb_2_690x474.png?ex=67a85eb9&is=67a70d39&hm=4db7dab64e87363450f488a45bd6a35f5a1358f66d7ce82cdf5fe683b96f68e0&');
+            background-color: #111111; /* Dark theme background */
+            background-image: url('https://cdn.discordapp.com/attachments/1309503851316904026/1336281537368293427/images_43.jpg?ex=67a33ca9&is=67a1eb29&hm=7c62b1da5681547de90cc4669bd4c8fd63d0c8a2e30a7e7140588e92017674cb&');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Main Content Styling */
+        /* Main content container */
         .container {
-            background-color: rgba(26, 26, 26, 0.85);
+            background-color: rgba(26, 26, 26, 0.85); /* Dark background for the form */
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
@@ -38,13 +38,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
         }
 
-        /* Buttons */
+        /* Neon title effect */
+        .welcome-message h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #ff6666; /* Neon Red for neon effect */
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 15px #ff6666;
+        }
+
+        /* Neon style for buttons */
         .btn {
             display: inline-block;
-            background-color: #ff6666;
+            background-color: #ff6666; /* Light red color for all buttons */
             color: white;
             padding: 12px 24px;
             margin: 10px 0;
@@ -53,49 +62,21 @@
             font-size: 1.1rem;
             transition: all 0.3s ease-in-out;
             text-align: center;
-            white-space: nowrap;
+            white-space: nowrap; /* Prevents text from wrapping */
         }
 
         .btn:hover {
-            background-color: #ff4d4d;
+            background-color: #ff4d4d; /* Darker red on hover */
             transform: translateY(-4px);
         }
 
-        .btn.discord {
-            background-color: #5865F2;
-        }
-
-        .btn.discord:hover {
-            background-color: #4653C0;
-        }
-
-        .btn.grey {
-            background-color: #888;
-        }
-
-        .btn.grey:hover {
-            background-color: #777;
-        }
-
-        .vpn-link {
-            color: red;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .vpn-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Pages */
-        .page {
-            display: none;
-        }
-
-        /* Scrollable tutorial page */
-        #tutorial-page {
-            overflow-y: auto;
-            max-height: 80vh;
+        /* Main form */
+        #main-form {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
         }
 
         /* Responsive Design */
@@ -103,6 +84,9 @@
             .container {
                 max-width: 90%;
                 padding: 30px;
+            }
+            .welcome-message h2 {
+                font-size: 2.5rem;
             }
             .btn {
                 padding: 12px 22px;
@@ -114,6 +98,9 @@
             .container {
                 padding: 20px;
             }
+            .welcome-message h2 {
+                font-size: 2rem;
+            }
             .btn {
                 padding: 10px 20px;
                 font-size: 0.9rem;
@@ -122,46 +109,22 @@
     </style>
 </head>
 <body>
-    <!-- Main Form -->
-    <div class="container page" id="main-form">
-        <h1>OVION GENERATOR</h1>
-        <a href="https://www.genned.net/auth/oviongen" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
-        <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
-        <a class="btn grey" id="go-to-tutorial">Go to Tutorial</a>
-    </div>
-
-    <!-- Tutorial Page -->
-    <div class="container page" id="tutorial-page">
-        <h1>TUTORIAL HOW TO USE</h1>
-        <p>1. Choose a website.</p>
-        <p>2. If you can't access it, use a VPN.</p>
-        <p>3. If still not working, use Opera Browser with a VPN.</p>
-        <p><b>Recommended VPN:</b></p>
-        <a href="https://play.google.com/store/apps/details?id=free.vpnvietnam.unlimited.secure.turbo.unblock.proxy" class="vpn-link" target="_blank">VIETNAM VPN</a>
-        <p><b>Note:</b> If access is still blocked, your internet provider may be restricting it.</p>
-
-        <!-- YouTube Videos -->
-        <iframe width="100%" height="200" src="https://www.youtube.com/embed/sC5mhiHMs6M" frameborder="0" allowfullscreen></iframe>
-        <iframe width="100%" height="200" src="https://www.youtube.com/embed/NkvgrLHPmiE" frameborder="0" allowfullscreen></iframe>
-        <iframe width="100%" height="200" src="https://www.youtube.com/embed/AusLJ9FOqfI" frameborder="0" allowfullscreen></iframe>
-
-        <a class="btn grey" id="back-to-main">Back to Generator</a>
+    <div class="container">
+        <!-- Main form -->
+        <div id="main-form">
+            <h1>OVION GENERATOR</h1>
+            <a href="https://www.genned.net/auth/ovion" class="btn" target="_blank">MAIN WEBSITE TIKTOK|MANUAL</a>
+            <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn" target="_blank">WEBSITE 2 TIKTOK|MANUAL</a>
+            <!-- New Websites -->
+            <a href="https://roblox.tg/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn" target="_blank">WEBSITE 3 MANUAL ONLY</a>
+            <a href="https://r.oblox.hk.com/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn" target="_blank">WEBSITE 4 TIKTOK ONLY</a>
+            <a href="https://muharrem.live/BypassAuth/Muharrem" class="btn" target="_blank">Force Disable Authenticator</a>
+        </div>
     </div>
 
     <script>
-        // Page Navigation
-        document.getElementById('go-to-tutorial').addEventListener('click', function() {
-            document.getElementById('main-form').style.display = 'none';
-            document.getElementById('tutorial-page').style.display = 'block';
-        });
-
-        document.getElementById('back-to-main').addEventListener('click', function() {
-            document.getElementById('tutorial-page').style.display = 'none';
-            document.getElementById('main-form').style.display = 'block';
-        });
-
-        // Show main form on load
-        document.getElementById('main-form').style.display = 'block';
+        // JavaScript to handle transitions between pages
+        // No longer needed as there are no more page transitions
     </script>
 </body>
 </html>
