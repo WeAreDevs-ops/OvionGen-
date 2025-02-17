@@ -63,6 +63,14 @@
             background-color: #5B6E8D;
         }
 
+        .btn.gray {
+            background-color: #A9A9A9; /* Gray color for buttons */
+        }
+
+        .btn.gray:hover {
+            background-color: #808080;
+        }
+
         #main-form {
             display: block;
             font-size: 1.2rem;
@@ -79,6 +87,11 @@
             padding: 20px;
             overflow-y: scroll;
             height: 400px;
+        }
+
+        #tutorial-page iframe {
+            width: 100%;
+            height: 315px;
         }
 
         @media (max-width: 768px) {
@@ -107,16 +120,18 @@
     <div class="container">
         <!-- Main Form -->
         <div id="main-form">
-            <button class="btn" id="go-to-tutorial">Go to Tutorial</button>
-            <h1>OVION GENERATOR</h1>
             <a href="https://www.genned.net/auth/ovion" class="btn">MAIN WEBSITE TIKTOK | MANUAL</a>
             <a href="https://r.oblox.com.co/generator/Ovion/create" class="btn">WEBSITE 2 TIKTOK | MANUAL</a>
             <a href="https://roblox.tg/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn">WEBSITE 3 MANUAL ONLY</a>
             <a href="https://r.oblox.hk.com/dashboard/?code=MjI4MDM0NTk1NzU5MDUzMTQ1" class="btn">WEBSITE 4 TIKTOK ONLY</a>
+
+            <!-- Go to Tutorial button at the bottom -->
+            <button class="btn gray" id="go-to-tutorial">Go to Tutorial</button>
         </div>
 
         <!-- Tutorial Page -->
         <div id="tutorial-page">
+            <button class="btn gray" id="back-to-main">Back</button>
             <h2>TUTORIAL HOW TO USE EACH WEBSITE</h2>
             <p>1. Choose a website that you want</p>
             <p>2. If you can't access this website, you need to use VPN and connect to any country and try again</p>
@@ -127,13 +142,25 @@
             <p><a href="https://youtu.be/AusLJ9FOqfI?si=5xUN3_af9sqS3YR6">Tutorial Video 1</a></p>
             <p><a href="https://youtu.be/NkvgrLHPmiE?si=Xp_m4h7BIpz3Ep5H">Tutorial Video 2</a></p>
             <p><a href="https://youtu.be/AusLJ9FOqfI?si=5xUN3_af9sqS3YR6">Tutorial Video 3</a></p>
+
+            <!-- YouTube Embed Videos -->
+            <h3>Embedded Videos</h3>
+            <iframe src="https://www.youtube.com/embed/AusLJ9FOqfI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/NkvgrLHPmiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
     <script>
+        // Go to Tutorial Page
         document.getElementById('go-to-tutorial').addEventListener('click', function() {
             document.getElementById('main-form').style.display = 'none';
             document.getElementById('tutorial-page').style.display = 'block';
+        });
+
+        // Back to Main Form
+        document.getElementById('back-to-main').addEventListener('click', function() {
+            document.getElementById('tutorial-page').style.display = 'none';
+            document.getElementById('main-form').style.display = 'block';
         });
     </script>
 </body>
